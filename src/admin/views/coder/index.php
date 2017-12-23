@@ -1,0 +1,35 @@
+<?php
+
+/* @var $this yii\web\View */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model yii2module\encrypt\admin\forms\CoderForm */
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii2module\encrypt\admin\forms\CoderForm;
+
+$this->title = t('encrypt/coder', 'title');
+Yii::$app->navigation->breadcrumbs->create($this->title);
+?>
+<div class="send-sms">
+
+    <div class="row">
+        <div class="col-lg-12">
+			<?php $form = ActiveForm::begin(); ?>
+			
+			<?= $form->field($model, 'text')->textarea() ?>
+	
+            <div class="form-group">
+				<?= Html::submitButton(t('action', 'encode'), ['class' => 'btn btn-primary', 'value'=>CoderForm::ACTION_ENCODE, 'name'=>'submit']) ?>
+				<?= Html::submitButton(t('action', 'decode'), ['class' => 'btn btn-primary', 'value'=>CoderForm::ACTION_DECODE, 'name'=>'submit']) ?>
+            </div>
+			
+			<?php ActiveForm::end(); ?>
+	
+	        <?php if(!empty($result)) { ?>
+                <pre><?= $result ?></pre>
+	        <?php } ?>
+
+        </div>
+    </div>
+</div>
