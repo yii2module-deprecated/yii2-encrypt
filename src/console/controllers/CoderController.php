@@ -13,14 +13,14 @@ class CoderController extends Controller
 	public function actionEncode()
 	{
 		$text = Enter::display('Enter text');
-		$encrypted = Yii::$app->encrypter->encrypt($text);
+		$encrypted = Yii::$app->encrypt->coder->encode($text);
 		Output::block($encrypted, 'Encrypted');
 	}
 	
 	public function actionDecode()
 	{
 		$encrypted = Enter::display('Enter encrypted');
-		$text = Yii::$app->encrypter->decrypt($encrypted);
+		$text = Yii::$app->encrypt->coder->decode($encrypted);
 		Output::block($text, 'Text');
 	}
 	
