@@ -2,6 +2,7 @@
 
 namespace yii2module\encrypt\admin\forms;
 
+use Yii;
 use yii\base\Model;
 
 class CoderForm extends Model {
@@ -25,7 +26,7 @@ class CoderForm extends Model {
 	public function attributeLabels()
 	{
 		return [
-			'text' => t('encrypt/main', 'text'),
+			'text' => Yii::t('encrypt/main', 'text'),
 		];
 	}
 }
