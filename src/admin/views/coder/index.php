@@ -27,7 +27,7 @@ Yii::$app->navigation->breadcrumbs->create($this->title);
 			<?php ActiveForm::end(); ?>
 	
 	        <?php if(!empty($result)) { ?>
-                <pre><?= $result ?></pre>
+                <pre><code><?= $result ?></code></pre>
 	        <?php } ?>
 
         </div>
