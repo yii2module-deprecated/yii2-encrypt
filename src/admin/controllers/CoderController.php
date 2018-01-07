@@ -6,6 +6,7 @@ use common\enums\rbac\PermissionEnum;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii2lab\helpers\Behavior;
 use yii2module\encrypt\admin\forms\CoderForm;
 
 class CoderController extends Controller
@@ -14,15 +15,7 @@ class CoderController extends Controller
 	public function behaviors()
 	{
 		return [
-			'access' => [
-				'class' => AccessControl::className(),
-				'rules' => [
-					[
-						'allow' => true,
-						'roles' => [PermissionEnum::ENCRYPT_MANAGE],
-					],
-				],
-			],
+			'access' => Behavior::access(PermissionEnum::ENCRYPT_MANAGE),
 		];
 	}
 	
