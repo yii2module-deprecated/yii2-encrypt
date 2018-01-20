@@ -15,6 +15,14 @@ class CoderTest extends Unit
 		expect($text)->equals($decoded);
 	}
 	
+	public function testEncodeAndDecodeByTestProfile()
+	{
+		$text = 'custom text';
+		$encoded = Yii::$app->encrypt->coder->encode($text, 'test');
+		$decoded = Yii::$app->encrypt->coder->decode($encoded, 'test');
+		expect($text)->equals($decoded);
+	}
+	
 	public function testDecodeByDefaultProfile()
 	{
 		$text = 'custom text';
@@ -27,10 +35,6 @@ class CoderTest extends Unit
 	{
 		$text = 'custom text';
 		$encoded = 'XkmHqAh9wRWsRcQpLdkkZQ==';
-		$decoded = Yii::$app->encrypt->coder->decode($encoded, 'test');
-		expect($text)->equals($decoded);
-		
-		$encoded = Yii::$app->encrypt->coder->encode($text, 'test');
 		$decoded = Yii::$app->encrypt->coder->decode($encoded, 'test');
 		expect($text)->equals($decoded);
 	}
