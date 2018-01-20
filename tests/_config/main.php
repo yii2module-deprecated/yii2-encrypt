@@ -1,8 +1,10 @@
 <?php
 
+use yii2lab\domain\helpers\ConfigHelper;
+
 return [
 	'components' => [
-		'encrypt' => [
+		'encrypt' => ConfigHelper::normalizeItemConfig('encrypt', [
 			'class' => 'yii2module\encrypt\domain\Domain',
 			'services' => [
 				'coder' => [
@@ -18,6 +20,6 @@ return [
 					],
 				],
 			],
-		],
+		]),
 	],
 ];
