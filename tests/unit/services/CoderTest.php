@@ -1,5 +1,5 @@
 <?php
-namespace tests\unit;
+namespace tests\unit\services;
 
 use Codeception\Test\Unit;
 use Yii;
