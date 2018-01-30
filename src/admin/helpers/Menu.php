@@ -4,11 +4,9 @@ namespace yii2module\encrypt\admin\helpers;
 
 use common\enums\rbac\PermissionEnum;
 
-// todo: отрефакторить - сделать нормальный интерфейс и родителя
-
 class Menu {
 	
-	static function getMenu() {
+	public function toArray() {
 		return [
 			'label' => ['encrypt/coder', 'title'],
 			'icon' => 'shield',
