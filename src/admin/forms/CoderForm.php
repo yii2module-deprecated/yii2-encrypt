@@ -26,7 +26,7 @@ class CoderForm extends Model {
 	public function attributeLabels()
 	{
 		return [
-			'text' => Yii::t('encrypt/main', 'text'),
+			'text' => Yii::t('encrypt/coder', 'text'),
 		];
 	}
 }
