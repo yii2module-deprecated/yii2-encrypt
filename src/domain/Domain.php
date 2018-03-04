@@ -10,7 +10,13 @@ namespace yii2module\encrypt\domain;
 class Domain extends \yii2lab\domain\Domain {
 
 	public function config() {
-		return [];
+		return [
+			'services' => [
+				'coder' => [
+					
+				],
+			],
+		];
 	}
 
 }
