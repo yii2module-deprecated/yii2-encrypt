@@ -20,8 +20,8 @@ Yii::$app->navigation->breadcrumbs->create($this->title);
 			<?= $form->field($model, 'text')->textarea() ?>
 	
             <div class="form-group">
-				<?= Html::submitButton(t('action', 'encode'), ['class' => 'btn btn-primary', 'value'=>CoderForm::ACTION_ENCODE, 'name'=>'submit']) ?>
-				<?= Html::submitButton(t('action', 'decode'), ['class' => 'btn btn-primary', 'value'=>CoderForm::ACTION_DECODE, 'name'=>'submit']) ?>
+				<?= Html::submitButton(Yii::t('action', 'encode'), ['class' => 'btn btn-primary', 'value'=>CoderForm::ACTION_ENCODE, 'name'=>'submit']) ?>
+				<?= Html::submitButton(Yii::t('action', 'decode'), ['class' => 'btn btn-primary', 'value'=>CoderForm::ACTION_DECODE, 'name'=>'submit']) ?>
             </div>
 			
 			<?php ActiveForm::end(); ?>
