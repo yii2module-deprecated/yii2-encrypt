@@ -1,24 +1,23 @@
 Конфигурация
 ===
-Объявлять профили можно в конфиге `domains-local.php`
+Объявлять профили можно в конфиге `domains.php`
 ```php
-'encrypt' => [
-	'class' => 'yii2module\encrypt\domain\Domain',
-	'services' => [
-		'coder' => [
-			'profiles' => [
-				'default' => [
-					'password' => 'zx1uDi4TG',
-					'iv' => 'qrk4QVgE78ukb1PH',
-				],
-				'test' => [
-					'password' => 'zxGqh96wC',
-					'iv' => 'diUeXzEr426k8dNJ',
-				],
-			],
-		],
-	],
+return [
+	'encrypt' => 'yii2module\encrypt\domain\Domain',
 ],
 ```
 
-> Note: профили следует хранить в конфиге `domains-local.php` для локальной настройки профилей.
+Профили следует хранить в конфиге `env-local.php` для локальной настройки профилей.
+
+```php
+return [
+	'encrypt' => [
+		'profiles' => [
+			'default' => [
+				'password' => 'qwerty123',
+				'iv' => 'ZZZZZZZZZZZZZZZZ',
+			],
+		],
+	],
+];
+```
