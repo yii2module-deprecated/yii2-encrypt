@@ -13,7 +13,7 @@ class Domain extends \yii2lab\domain\Domain {
 		return [
 			'services' => [
 				'coder' => [
-					
+					'profiles' => env('encrypt.profiles'),
 				],
 			],
 		];
