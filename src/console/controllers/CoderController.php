@@ -19,7 +19,7 @@ class CoderController extends Controller
 	public function actionEncode()
 	{
 		$text = Enter::display('Enter text');
-		$encrypted = Yii::$app->encrypt->coder->encode($text);
+		$encrypted = Yii::$domain->encrypt->coder->encode($text);
 		Output::block($encrypted, 'Encrypted');
 	}
 	
@@ -29,7 +29,7 @@ class CoderController extends Controller
 	public function actionDecode()
 	{
 		$encrypted = Enter::display('Enter encrypted');
-		$text = Yii::$app->encrypt->coder->decode($encrypted);
+		$text = Yii::$domain->encrypt->coder->decode($encrypted);
 		Output::block($text, 'Text');
 	}
 	

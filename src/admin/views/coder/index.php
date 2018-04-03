@@ -9,7 +9,7 @@ use yii\bootstrap\ActiveForm;
 use yii2module\encrypt\admin\forms\CoderForm;
 
 $this->title = Yii::t('encrypt/coder', 'title');
-Yii::$app->navigation->breadcrumbs->create($this->title);
+Yii::$domain->navigation->breadcrumbs->create($this->title);
 ?>
 <div class="send-sms">
 

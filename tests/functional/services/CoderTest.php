@@ -10,16 +10,16 @@ class CoderTest extends Unit
 	public function testEncodeAndDecode()
 	{
 		$text = 'custom text';
-		$encoded = Yii::$app->encrypt->coder->encode($text);
-		$decoded = Yii::$app->encrypt->coder->decode($encoded);
+		$encoded = Yii::$domain->encrypt->coder->encode($text);
+		$decoded = Yii::$domain->encrypt->coder->decode($encoded);
 		expect($text)->equals($decoded);
 	}
 	
 	public function testEncodeAndDecodeByTestProfile()
 	{
 		$text = 'custom text';
-		$encoded = Yii::$app->encrypt->coder->encode($text, 'test');
-		$decoded = Yii::$app->encrypt->coder->decode($encoded, 'test');
+		$encoded = Yii::$domain->encrypt->coder->encode($text, 'test');
+		$decoded = Yii::$domain->encrypt->coder->decode($encoded, 'test');
 		expect($text)->equals($decoded);
 	}
 	
@@ -27,7 +27,7 @@ class CoderTest extends Unit
 	{
 		$text = 'custom text';
 		$encoded = 'aONuANgQUdKP5naf9R60bw==';
-		$decoded = Yii::$app->encrypt->coder->decode($encoded);
+		$decoded = Yii::$domain->encrypt->coder->decode($encoded);
 		expect($text)->equals($decoded);
 	}
 	
@@ -35,15 +35,15 @@ class CoderTest extends Unit
 	{
 		$text = 'custom text';
 		$encoded = 'XkmHqAh9wRWsRcQpLdkkZQ==';
-		$decoded = Yii::$app->encrypt->coder->decode($encoded, 'test');
+		$decoded = Yii::$domain->encrypt->coder->decode($encoded, 'test');
 		expect($text)->equals($decoded);
 	}
 	
 	public function testDecodeFail()
 	{
 		$text = 'custom text';
-		$encoded = Yii::$app->encrypt->coder->encode($text, 'test');
-		$decoded = Yii::$app->encrypt->coder->decode($encoded);
+		$encoded = Yii::$domain->encrypt->coder->encode($text, 'test');
+		$decoded = Yii::$domain->encrypt->coder->decode($encoded);
 		expect(false)->equals($decoded);
 	}
 }
