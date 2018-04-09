@@ -4,7 +4,7 @@ namespace yii2module\encrypt\console\controllers;
 
 use Yii;
 use yii2lab\console\helpers\input\Enter;
-use yii2lab\console\yii\console\Controller;
+use yii2lab\console\base\Controller;
 use yii2lab\console\helpers\Output;
 
 /**
