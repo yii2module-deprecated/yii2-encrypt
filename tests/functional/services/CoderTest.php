@@ -1,7 +1,7 @@
 <?php
 namespace tests\unit\services;
 
-use Codeception\Test\Unit;
+use yii2lab\test\Test\Unit;
 use Yii;
 
 class CoderTest extends Unit
