@@ -2,7 +2,6 @@
 
 namespace yii2module\encrypt\admin\controllers;
 
-use common\enums\rbac\PermissionEnum;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -15,7 +14,7 @@ class CoderController extends Controller
 	public function behaviors()
 	{
 		return [
-			'access' => Behavior::access(PermissionEnum::ENCRYPT_MANAGE),
+			'access' => Behavior::access(EPermissionEnum::ENCRYPT_MANAGE),
 		];
 	}
 	
