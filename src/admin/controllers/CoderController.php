@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii2lab\helpers\Behavior;
 use yii2module\encrypt\admin\forms\CoderForm;
+use yii2module\encrypt\domain\enums\EncryptPermissionEnum;
 
 class CoderController extends Controller
 {
@@ -14,7 +15,7 @@ class CoderController extends Controller
 	public function behaviors()
 	{
 		return [
-			'access' => Behavior::access(EPermissionEnum::ENCRYPT_MANAGE),
+			'access' => Behavior::access(EncryptPermissionEnum::MANAGE),
 		];
 	}
 	
