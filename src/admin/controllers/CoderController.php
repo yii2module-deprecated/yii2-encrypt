@@ -5,7 +5,7 @@ namespace yii2module\encrypt\admin\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
-use yii2lab\helpers\Behavior;
+use yii2lab\extension\web\helpers\Behavior;
 use yii2module\encrypt\admin\forms\CoderForm;
 use yii2module\encrypt\domain\enums\EncryptPermissionEnum;
 
